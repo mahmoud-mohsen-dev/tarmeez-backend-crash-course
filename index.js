@@ -29,10 +29,10 @@ app.use(express.json());
 //     next();
 // });
 
-app.get("/hello", (req, res) => {
+app.get("/", (req, res) => {
     // res.send('{ "data": "hello" }');
-    res.json({ data: "hello" });
-    console.log("hello");
+    res.send("Hello in node js project");
+    console.log("/ was called");
 });
 
 app.post("/sayHi", (req, res) => {
@@ -55,9 +55,9 @@ app.post("/schedule/new", (req, res) => {
     res.send("posrt requset: schedule new");
 });
 
-app.get("/calc", (req, res) => {
-    res.send("calculating");
-    console.log("calculating");
+app.get("/hi", (req, res) => {
+    res.send("hi");
+    console.log("hi was called");
 });
 
 app.get("/findSummation/:num1/:num2", (req, res) => {
